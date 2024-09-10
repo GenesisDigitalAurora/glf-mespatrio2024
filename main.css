@@ -269,6 +269,23 @@ img.images-percentages{
     text-align: center;
     text-decoration: none;
 }
+
+.footer-products .item-video a .img-item img,
+.footer-products .item-video button .img-item img{
+    display: block;
+}
+.footer-products .item-video a p,
+.footer-products .item-video button p{
+    display: flex;
+    height: 26px;
+    align-items: center;
+}
+
+.footer-products .item-video a .img-item,
+.footer-products .item-video button .img-item{
+    height: 210px;
+}
+
 @media  (max-width: 900px) {
     .footer-products{
         margin: 20px auto;
