@@ -475,6 +475,18 @@
             const InputName = document.querySelector('input[name="completename"]');
             const mainProducts = document.querySelectorAll('.main-products'); // Seleccionamos el contenedor principal de productos
             const videoButtons = document.querySelectorAll(".footer-products .btn-video");
+            const radioButtons = document.getElementsByName('radio-890');
+            const attentionDiv = document.querySelector('.attention');
+
+            function checkRadio() {
+                for (let radio of radioButtons) {
+                    if (radio.value === 'Cliente' && radio.checked) {
+                        attentionDiv.style.display = 'block';
+                        return;
+                    }
+                }
+                attentionDiv.style.display = 'none';
+            }
 
 
             videoButtons.forEach(button => {
@@ -545,6 +557,10 @@
             CotizaBtb.addEventListener('click', function () {
                 InputName.focus();
             });
+
+            for (let radio of radioButtons) {
+                radio.addEventListener('change', checkRadio);
+            }
 
             productButtons.forEach(button => {
                 button.addEventListener('click', function () {
